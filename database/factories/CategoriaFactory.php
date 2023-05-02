@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Marca>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Categoria>
  */
-class MarcaFactory extends Factory
+class CategoriaFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,7 @@ class MarcaFactory extends Factory
     public function definition(): array
     {
         return [
-            'nombre'=> $this->faker->word()
+            'imagen' => 'categorias/' . $this->faker->image('public/storage/categorias',640,480,null,false)
         ];
     }
 }

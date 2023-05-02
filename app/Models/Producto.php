@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Producto extends Model
 {
     use HasFactory;
+
+    const BORRADOR = 1;
+    const PUBLICADO = 2;
+
+
+
     //cuando tiene muchos campos(atributos)
     //los sgts no se asignan masivamente    
     protected $guarded =['id','created_at','updated_at'];

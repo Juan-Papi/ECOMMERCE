@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
 
             $table->string('nombre');
-            $table->string('slug');
             $table->string('imagen');
-            $table->boolean('edicionCo');
-            $table->boolean('tamaño');
+            $table->string('slug');
+            $table->boolean('edicionCo')->default(false);
+            $table->boolean('tamaño')->default(false);
             
             $table->unsignedBigInteger('categoria_id');
             $table->foreign('categoria_id')->references('id')->on('categorias');

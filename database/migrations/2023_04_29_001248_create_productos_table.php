@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
+use App\Models\Producto;
 return new class extends Migration
 {
     /**
@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('slug');
             $table->text('descripcion');
             $table->float('precio');
-            $table->integer('cantidad');
+            $table->integer('cantidad')->nullable();
+            $table->enum('estado',[Producto::BORRADOR, Producto::PUBLICADO]) -> default(Producto::BORRADOR);//borrador=1 && publicado=2
 
             $table->unsignedBigInteger('subcategoria_id');
             $table->foreign('subcategoria_id')->references('id')->on('subcategorias');
