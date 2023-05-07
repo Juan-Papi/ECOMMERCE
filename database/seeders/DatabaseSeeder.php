@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-
+use App\Models\Edicionco;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 
@@ -28,5 +28,8 @@ class DatabaseSeeder extends Seeder
         $this->call(CategoriaSeeder::class);
         $this->call(SubcategoriaSeeder::class);
         $this->call(ProductoSeeder::class);
+        $this->call(EdicioncoSeeder::class);
+        $this->call(EdicioncoProductoSeeder::class);
+        $this->call(TamañoSeeder::class);
     }
 }

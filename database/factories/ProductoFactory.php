@@ -29,9 +29,6 @@ class ProductoFactory extends Factory
     }else{
         $cantidad = 15;
     }
-
-
-
         return [
             'nombre' => $nombre,
             'slug' => Str::slug($nombre),

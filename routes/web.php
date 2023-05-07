@@ -1,7 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Subcategoria;
+use App\Models\Producto;
+use Illuminate\Routing\Route as RoutingRoute;
+use Illuminate\Routing\Router;
+use Symfony\Component\Routing\Annotation\Route as AnnotationRoute;
+use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\Navigation;
+use App\Http\Livewire\AdministradorComponent;
+use App\Http\Livewire\CompradorComponent;
+use App\Http\Livewire\CategoriaProductos;
+use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +23,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*Route::get('/', function () {
+    $subcategorias = Subcategoria::all();
+    $productos = Producto::all();
+    return view('principal',compact('subcategorias'),compact('productos'));
 });
+*/
+/*
+Route::get('/', function () {
+    return view('');
+});
+*/
 
+/*Route::get('/', function () {
+    return view('principal');
+});*/
+//Route::get('/',CompradorComponent::class)->name('comprador.index');
+
+//Route::get('/',CategoriaProductos::class)->name('bienvenida.index');
+
+Route::get('/',WelcomeController::class)->name('welcome.index');
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -26,3 +52,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+

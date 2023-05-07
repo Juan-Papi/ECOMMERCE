@@ -104,7 +104,9 @@ class SubcategoriaSeeder extends Seeder
           [
             'categoria_id' => 5 ,
             'nombre' => 'Deepak Chopra',
-            'slug' => Str::slug('Deepak Chopra')     
+            'slug' => Str::slug('Deepak Chopra') ,
+            'edicionCo' => true,
+            'tamaño' => true    
           ],
           [
             'categoria_id' => 5,
@@ -114,7 +116,9 @@ class SubcategoriaSeeder extends Seeder
           [
             'categoria_id' => 5,
             'nombre' => 'Dr.Mark Hyman',
-            'slug' => Str::slug('Dr.Mark Hyman')     
+            'slug' => Str::slug('Dr.Mark Hyman'),
+            'edicionCo' => true,
+            'tamaño' => true        
           ],
           [
             'categoria_id' => 5,
