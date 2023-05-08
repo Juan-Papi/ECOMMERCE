@@ -24,8 +24,9 @@
                <div class="flex">
                       <p class="text-orange-500">Editorial: {{$producto->marca->nombre}}</p>
                </div>
-               <p>USD {{$producto->precio}}</p>
+               <p class="text-gray-700">USD {{$producto->precio}}</p>
             </div>
+            @livewire('add-cart-item', ['producto' => $producto])
         </div>
     </div>
     @push('script')

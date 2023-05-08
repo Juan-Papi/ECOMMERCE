@@ -12,10 +12,6 @@ class ProductoComponent extends Component
     public function render()
     {   
         
-        $producfiltrado = Producto::whereHas('subcategoria', function(Builder $query){
-            $query->where('edicionCo', true)
-            ->where('tamaño',false);
-        })->get();
     //---------------------------------------- 
         $productos = Producto::paginate(6);
     //----------------------------------------
