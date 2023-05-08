@@ -19,5 +19,8 @@
    
    
     @livewireScripts
+    
+    {{-- se añade la sgte directiva --}}
+    @stack('script')
 </body>
 </html>
