@@ -12,6 +12,7 @@ use App\Http\Livewire\AdministradorComponent;
 use App\Http\Livewire\CompradorComponent;
 use App\Http\Livewire\CategoriaProductos;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\CproductoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,6 +44,8 @@ Route::get('/', function () {
 //Route::get('/',CategoriaProductos::class)->name('bienvenida.index');
 
 Route::get('/',WelcomeController::class)->name('welcome.index');
+Route::get('productos/{producto}',[CproductoController::class,'show'])->name('productos.cmirar');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

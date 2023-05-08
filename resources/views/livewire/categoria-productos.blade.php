@@ -14,7 +14,7 @@
                             </figure>
                             <div class="py-4 px-6">
                                 <h1 class="text-lg font-semibold">
-                                    <a href="" style="text-decoration: none;">
+                                    <a href="{{Route('productos.cmirar',$producto)}}" style="text-decoration: none;">
                                         {{ Str::limit($producto->nombre, 20) }}
                                     </a>
 
